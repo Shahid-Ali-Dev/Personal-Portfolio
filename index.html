@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Md. Shahid Ali — Portfolio</title>
+  <meta name="description" content="Md. Shahid Ali — Python Automation & Data Scientist • Bot Builder • Blender Enthusiast" />
+  <meta property="og:title" content="Md. Shahid Ali — Portfolio" />
+  <meta property="og:description" content="Python Automation & Data Scientist • Bot Builder • Blender Enthusiast" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href = "css/style.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;       /* github dark */
+      --panel: #111827;    /* slate-900 */
+      --muted: #94a3b8;    /* slate-400 */
+      --text: #e5e7eb;     /* gray-200 */
+      --brand: #22c55e;    /* green-500 */
+      --brand-2: #06b6d4;  /* cyan-500 */
+      --card: #0b1321;     /* deep navy */
+      --ring: #1f2937;     /* slate-800 */
+      --chip: #0f172a;     /* slate-950 */
+      --chip-brd: #1f2937; /* slate-800 */
+      --shadow: 0 20px 40px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--text); scroll-behavior: smooth; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* --- Layout helpers --- */
+    .container { width: min(1100px, 92vw); margin: 0 auto; }
+    .grid { display: grid; gap: 1.25rem; }
+    .btn { display:inline-flex; align-items:center; gap:.5rem; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#00100f; padding:.9rem 1.1rem; border-radius:14px; font-weight:700; border:0; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 24px 48px rgba(0,0,0,.45); }
+    .btn.ghost { background:transparent; color: var(--text); border:1px solid #213045; box-shadow:none; }
+    .btn.ghost:hover { border-color:#2b3f5a; }
+    .badge { display:inline-flex; align-items:center; gap:.4rem; padding:.5rem .75rem; border-radius:999px; border:1px solid var(--chip-brd); background: var(--chip); color:#cbd5e1; font-weight:600; font-size:.9rem; }
+    .card { background: radial-gradient(1000px 400px at 10% -20%, rgba(34,197,94,.08), transparent 40%), var(--card); border:1px solid #172033; border-radius:24px; padding: 1.25rem; box-shadow: var(--shadow); }
+
+    /* --- Nav --- */
+    .nav { position: sticky; top:0; z-index: 50; backdrop-filter: saturate(180%) blur(10px); background: rgba(13,17,23,.6); border-bottom: 1px solid #1f2a44; }
+    .nav .wrap { display:flex; align-items:center; justify-content:space-between; padding: .8rem 0; }
+    .logo { font-weight:800; letter-spacing:.4px; }
+    .logo span { color: var(--brand); }
+    .navlinks { display:flex; gap:.8rem; align-items:center; }
+    .navlinks a { padding:.55rem .8rem; border-radius:10px; font-weight:600; color:#cbd5e1; border:1px solid transparent; }
+    .navlinks a:hover { border-color:#24324f; background:#0b1321; }
+
+    /* --- Hero --- */
+    .hero { padding: 5.5rem 0 3.5rem; position: relative; overflow:hidden; }
+    .hero .container { display:grid; grid-template-columns: 1.3fr .9fr; gap:2rem; align-items:center; }
+    .headline { font-size: clamp(1.6rem, 3.8vw, 3rem); line-height:1.05; font-weight:800; letter-spacing:-.02em; }
+    .sub { color: var(--muted); margin-top: .75rem; font-size: 1.05rem; }
+    .cta { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1.4rem; }
+    .hero-visual { justify-self:end; }
+    .avatar { width:min(420px, 70vw); aspect-ratio: 1; border-radius: 28px; background: conic-gradient(from 180deg at 50% 50%, rgba(34,197,94,.15), rgba(6,182,212,.15), transparent 50%) , url('assets/me.jpg') center/cover no-repeat, #0e1627; border:1px solid #1b2a42; box-shadow: var(--shadow); }
+
+    /* --- Sections --- */
+    section { padding: 4rem 0; }
+    h2.section-title { font-size: clamp(1.2rem, 2.6vw, 2rem); letter-spacing:.2px; margin:0 0 1rem; }
+    p.lead { color: #cbd5e1; margin: .25rem 0 1rem; }
+
+    /* About */
+    .about .grid {
+      grid-template-columns: 1fr; /* only one column */
+    }
+
+    .about .photo { border-radius: 20px; overflow:hidden; border:1px solid #1b2a42; background:#0e1627; }
+
+    /* Skills */
+    .skills .chips { display:flex; flex-wrap:wrap; gap:.6rem; }
+
+    /* Projects */
+    .projects .cards { grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+    .project .title { font-weight:800; margin:.4rem 0 .2rem; }
+    .project .desc { color:#b6c2d9; font-size:.95rem; }
+    .project .links { display:flex; gap:.6rem; margin-top:.8rem; }
+
+    /* Education */
+    .edu .item { position:relative; padding-left:1.2rem; }
+    .edu .item:before { content:""; position:absolute; left:0; top:.35rem; width:.5rem; height:.5rem; border-radius:50%; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:0 0 0 3px #0b1321; }
+    .edu .meta { color:#9fb0cc; font-size:.95rem; }
+
+    /* Gallery */
+    .gallery .grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .gallery .tile { border-radius: 16px; overflow:hidden; border:1px solid #16243a; background:#0e1627; }
+
+    /* Contact */
+    .contact .card { display:grid; grid-template-columns: 1.2fr 1fr; gap:1rem; align-items:center; }
+    .contact .row { display:flex; gap:.6rem; flex-wrap:wrap; }
+
+    /* Footer */
+    footer { padding:2rem 0 3rem; color:#9fb0cc; border-top:1px solid #1f2a44; }
+
+    /* --- Scroll reveal animations --- */
+    .reveal { opacity:0; transform: translateY(18px) scale(.98); filter: saturate(0.9);
+      transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1), filter .4s ease; }
+    .reveal.show { opacity:1; transform: translateY(0) scale(1); filter: saturate(1); }
+
+    /* Responsive tweaks */
+    @media (max-width: 900px) {
+      .hero .container { grid-template-columns: 1fr; }
+      .hero-visual { order:-1; justify-self:center; }
+      .about .grid { grid-template-columns: 1fr; }
+      .contact .card { grid-template-columns: 1fr; }
+    }
+
+    /* ------------------------------------------------------------------
+       NEW: Force all gallery tiles to identical pixel size and force images
+       to cover the tile. Paste this at the end so it overrides earlier rules.
+       ------------------------------------------------------------------ */
+    .gallery .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* tile width */
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .gallery .tile {
+      width: 100%;
+      max-width: 320px;   /* EXACT width each tile will try to be (matches minmax) */
+      height: 220px;      /* FIXED height in pixels to match the first image's display */
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid #16243a;
+      background: #0e1627;
+      position: relative;
+      display: block;
+    }
+
+    /* Force image to fully fill the tile (will crop if needed) */
+    .gallery .tile > img {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+
+    /* Optional: make tiles slightly smaller on small screens */
+    @media (max-width: 700px) {
+      .gallery .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+      .gallery .tile { max-width: 100%; height: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container wrap">
+      <div class="logo">Md. <span>Shahid</span> Ali</div>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#gallery">Images</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="copy reveal">
+        <div class="badge">Python Automation & Data Scientist • Bot Builder • Blender Enthusiast</div>
+        <h1 class="headline">Hi, I’m <span style="color:var(--brand)">Md. Shahid Ali</span> — I build practical automations, clean UIs, and beginner-friendly projects.</h1>
+        <p class="sub">I’m a fresher focused on Python, Selenium, Flask, and modern HTML/CSS/Bootstrap. I also experiment with chatbots (LLaMA/Ollama) and explore animation in Blender.</p>
+        <div class="cta">
+          <a class="btn" href="assets/resume-1.pdf" download>Download Resume 1</a>
+          <a class="btn" href="assets/resume-2.pdf" download>Download Resume 2</a>
+          <a class="btn ghost" href="https://github.com/Shahid-Ali-Dev" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/shahid-ali-b70bbb24a/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="avatar" title="Your photo (assets/me.jpg)"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <h2 class="section-title reveal">About Me</h2>
+  <div class="grid">
+    <div class="text reveal full">
+      <h3>Hello, I’m Md. Shahid Ali</h3>
+      <p>
+        I am an aspiring <strong>Data Scientist and AI/ML Engineer</strong> with a strong academic background in commerce and a growing passion for technology. 
+        Currently pursuing my <strong>Bachelor of Commerce (Honours)</strong> from Karim City College, I’ve built a solid foundation in analytical thinking and problem-solving.
+      </p>
+      <p>
+        Alongside my studies, I am actively learning <strong>Python, SQL, Data Analysis, Machine Learning, and Artificial Intelligence</strong>, while also strengthening my programming fundamentals through projects in <strong>web development</strong> and automation. 
+        These projects help me apply my skills in real-world scenarios and prepare me for advanced AI/ML challenges.
+      </p>
+      <p>
+        My long-term goal is to leverage data-driven solutions and intelligent systems to solve impactful problems in business and society. I am constantly exploring new technologies and refining my skills to move closer to becoming a professional in the fields of <strong>Data Science</strong> and <strong>Artificial Intelligence</strong>.
+      </p>
+    </div>
+  </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills container">
+    <h2 class="section-title">Skills</h2>
+    <div class="chips reveal">
+      <span class="badge">Python</span>
+      <span class="badge">Flask</span>
+      <span class="badge">Jinja</span>
+      <span class="badge">Selenium WebDriver</span>
+      <span class="badge">PyAutoGUI</span>
+      <span class="badge">Web Automation</span>
+      <span class="badge">Web Scraping</span>
+      <span class="badge">SQL</span>
+      <span class="badge">HTML</span>
+      <span class="badge">CSS</span>
+      <span class="badge">Bootstrap</span>
+      <span class="badge">JavaScript (Basics)</span>
+      <span class="badge">Git & GitHub</span>
+      <span class="badge">REST (Basics)</span>
+      <span class="badge">LLaMA/Ollama</span>
+      <span class="badge">DuckDuckGo Search</span>
+      <span class="badge">Blender (Animation)</span>
+      <span class="badge">OOP Fundamentals</span>
+      <span class="badge">Debugging</span>
+      <span class="badge">Documentation</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects container">
+    <h2 class="section-title">Projects</h2>
+    <p class="lead">A few things I’ve built or experimented with. More on my GitHub profile.</p>
+    <div class="grid cards">
+      <article class="card project reveal">
+        <div class="badge">Selenium</div>
+        <h3 class="title">Tinder Swiper Bot</h3>
+        <p class="desc">Automates swipe actions, safe delays, and pop-up dismissal with robust selectors.</p>
+        <div class="links">
+          <a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shahid-Ali-Dev/Tinder_Swiper_Bot">View on GitHub</a>
+        </div>
+      </article>
+      <article class="card project reveal">
+        <div class="badge">Api Automation</div>
+        <h3 class="title">Automated Flight Alert Programme</h3>
+        <p class="desc">A Python tool that monitors flight prices and sends alerts when ticket costs drop.</p>
+        <div class="links">
+          <a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shahid-Ali-Dev/Flight_Alert_Programme">View on GitHub</a>
+        </div>
+      </article>
+      <article class="card project reveal">
+        <div class="badge">Bots</div>
+        <h3 class="title">Discord / WhatsApp Auto-Responder</h3>
+        <p class="desc">Context-aware replies with recent chat memory and safe message handling.</p>
+        <div class="links">
+          <a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shahid-Ali-Dev/Whatsapp_Chatbot">View on GitHub</a>
+        </div>
+      </article>
+      <article class="card project reveal">
+        <div class="badge">Voice Assistant</div>
+        <h3 class="title">Talk-to-Search Assistant</h3>
+        <p class="desc">Speech recognition + LLaMA/Ollama + DuckDuckGo search for quick answers.</p>
+        <div class="links">
+          <a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shahid-Ali-Dev/Ai_VoiceAssistant">View on GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="edu container">
+    <h2 class="section-title">Education</h2>
+    <div class="grid reveal">
+      <div class="item card">
+        <h3>Karim City College</h3>
+        <div class="meta">B.Com (Honours) — Ongoing (2024-2028)</div>
+      </div>
+      <div class="item card">
+        <h3>Xavier’s English High School</h3>
+        <div class="meta">Class 12, Commerce — <strong>90%</strong></div>
+      </div>
+      <div class="item card">
+        <h3>Xavier’s English High School</h3>
+        <div class="meta">Class 10 — <strong>70%</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY / IMAGES -->
+  <section id="gallery" class="gallery container">
+    <h2 class="section-title">Images of my work</h2>
+    <p class="lead">Here are a few examples of my work.</p>
+    <div class="grid">
+      <div class="tile reveal"><img src="assets/gallery-2.png" alt="Work Image 1" /></div>
+      <div class="tile reveal"><img src="assets/gallery-3.png" alt="Work Image 2" /></div>
+      <div class="tile reveal"><img src="assets/gallery-4.png" alt="Work Image 3" /></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact container">
+    <h2 class="section-title">Contact</h2>
+    <div class="card reveal">
+      <div>
+        <p class="lead">I’m open to internships, freelance, and collaboration opportunities.</p>
+        <div class="row">
+          <a class="btn" href="mailto:alishahid555443@gmail.com">Email</a>
+          <a class="btn ghost" href="tel:+916207431327">Call</a>
+          <a class="btn ghost" href="https://github.com/Shahid-Ali-Dev" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/shahid-ali-b70bbb24a/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid" style="grid-template-columns:1fr auto; align-items:center;">
+        <small>© <span id="year"></span> Md. Shahid Ali. All rights reserved.</small>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal using IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+

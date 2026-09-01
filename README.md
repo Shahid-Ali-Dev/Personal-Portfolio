@@ -1,4 +1,4 @@
-# Personal Portfolio — Md. Shahid Ali 🚀
+# Personal Portfolio — Md. Shahid Ali
 
 [![Live Portfolio](https://img.shields.io/badge/Live_Demo-Personal_Portfolio-38bdf8?style=for-the-badge&logo=google-chrome&logoColor=white)](https://shahid-ali-dev.github.io/Personal-Portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-shahid-ali-b70bbb24a/)

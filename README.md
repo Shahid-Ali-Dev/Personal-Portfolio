@@ -1,31 +1,57 @@
-# Personal Portfolio Website 🌐
+# Personal Portfolio — Md. Shahid Ali 🚀
 
-This is my personal portfolio website showcasing my skills, projects, and background.  
-It is built using **HTML, CSS, and JavaScript** with responsive design and interactive elements.  
+[![Live Portfolio](https://img.shields.io/badge/Live_Demo-Personal_Portfolio-38bdf8?style=for-the-badge&logo=google-chrome&logoColor=white)](https://shahid-ali-dev.github.io/Personal-Portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-shahid-ali-b70bbb24a/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Shahid-Ali-Dev)
 
-## 🚀 Features
-- Clean and modern responsive layout  
-- Animated sections and hover effects  
-- Gallery to showcase project screenshots  
-- Smooth scrolling and user-friendly navigation  
-- Downloadable resume for quick access  
+Production portfolio website showcasing my commercial engineering experience across **Full-Stack Real-Time SaaS Platforms** and **Bespoke Shopify Systems Architecture**. Built from scratch using modern semantic HTML5, custom CSS3, and performant vanilla JavaScript.
 
-## 🎯 Purpose
-The portfolio highlights my journey in tech. While I currently focus on **web development**, my ultimate goal is to grow into **Data Science and AI/ML engineering**. This site serves as both a professional introduction and a platform to share my work.  
+---
 
-## 🛠️ Tech Stack
-- **HTML5**  
-- **CSS3 (Animations, Flexbox, Grid)**  
-- **JavaScript (Basic interactivity)**  
+## 🌟 Key Features & Interactive Architecture
 
-## 📂 Structure
-- `index.html` → Main portfolio page  
-- `style.css` → Styles and animations  
-- `assets/` → Images and icons  
-- `resume.pdf` → My resume (downloadable)  
+- **Dual-Track Targeted Resumes:** One-click in-browser access to dedicated PDFs for **Full-Stack Engineering** and **Shopify Systems Architecture**.
+- **Interactive Video Modal Lightboxes:** Seamless client-side modal player with fallback handling for rapid architectural demo walkthroughs without external page redirects.
+- **1-Click Password Copy Engine:** Interactive clipboard interaction on password-protected client stores with dynamic status tooltips.
+- **Certificate Verification Modals:** Lightbox viewer for verified internship credentials and achievements.
+- **Performance-Oriented UI:** Native `IntersectionObserver` scroll-reveal animations, dynamic reading progress bar, responsive mobile menu drawer, and fluid glassmorphic styling.
+- **Zero Heavy Framework Overhead:** 100% vanilla web technologies optimized for sub-second first-contentful-paint (FCP) and accessibility.
 
-## 🌍 Live Demo
-🔗 [View Portfolio Website](https://shahid-ali-dev.github.io/Personal-Portfolio/)   
+---
 
-## 📜 License
-This project is open-source and available under the MIT License.
+## 🛠️ Showcase of Featured Platforms
+
+### 🔹 Full-Stack SaaS & Real-Time Engines
+* **Shout Sync:** Multi-tenant collaborative workspace suite featuring sub-50ms live chat, interactive dynamic spreadsheets, Kanban task tracking, and peer-to-peer WebRTC audio/video meetings powered by **Django ASGI (Channels)**, **Redis**, and **React (TypeScript)**.
+* **Social Auto Engine:** Automated multi-channel content dispatcher broadcasting across YouTube, Instagram, X (Twitter), Facebook, Discord, and Telegram with **FastAPI**, OAuth2 token lifecycle management, Groq/LLaMA LLMs, and Cloudinary CDN optimizations.
+* **Shout Diagnostics & Analytics Engine:** High-performance social signal analyzer calculating retention drop-offs, engagement scoring, and algorithmic audience insights.
+
+### 🔹 Shopify Architecture & Data Automation
+* **Austin Design House:** Bespoke Alabaster theme build featuring continuous looped SVG section dividers, custom button interactions, Wishlist app integration, and automated Python collection generation scripts.
+* **Thomas Matthew Designs:** Modern e-commerce storefront with scroll-animated Liquid sections, multi-tier mega menus, dynamic Dark/Light theme switching, and automated catalog scraping pipelines.
+* **Minhnuyet Hardy Interiors:** Architectural interior design storefront with tailored gallery grids, micro-interactions, and automated high-resolution product synchronization.
+
+---
+
+## 💻 Tech Stack (Portfolio)
+
+* **Markup & Structure:** HTML5 (Semantic elements, accessible ARIA roles, Open Graph metadata)
+* **Styling & Layout:** Modern CSS3 (CSS Variables, Flexbox, Multi-column Grid, Glassmorphism, Keyframe animations)
+* **Scripting & Interactivity:** Vanilla JavaScript (ES6+, Async Clipboard API, IntersectionObserver API, HTML5 Video API, Event Delegation)
+* **Icons & Typography:** FontAwesome 6, Plus Jakarta Sans, JetBrains Mono
+
+---
+
+## 📂 Project Structure
+
+```text
+Personal-Portfolio/
+├── index.html              # Main single-page portfolio application
+├── css/
+│   └── style.css           # Core stylesheet, animations, and responsive breakpoints
+├── assets/
+│   ├── me.jpg              # Professional profile headshot
+│   ├── resume-fullstack.pdf # ATS-optimized Full-Stack Software Developer Resume
+│   ├── resume-shopify.pdf   # ATS-optimized Shopify Systems Developer Resume
+│   └── *.png / *.jpg       # Verified internship certificates & media assets
+└── README.md               # Repository documentation

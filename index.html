@@ -3,254 +3,777 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Shahid Ali — Portfolio</title>
+    <title>Md. Shahid Ali — Full-Stack & Shopify Systems Engineer</title>
+    <meta name="description" content="Portfolio of Md. Shahid Ali — Full-Stack Python/React Developer and Shopify Systems Architect specializing in real-time SaaS, APIs, and e-commerce automation.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shahid-ali-dev.github.io/Personal-Portfolio/">
+    <meta property="og:title" content="Md. Shahid Ali — Full-Stack & Shopify Systems Engineer">
+    <meta property="og:description" content="Full-Stack Python/React Developer and Shopify Systems Architect. Explore live SaaS applications, real-time collaboration engines, and e-commerce stores.">
+    <meta property="og:image" content="https://shahid-ali-dev.github.io/Personal-Portfolio/assets/me.jpg">
+    
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230b0f17'/><path d='M30 35 L16 50 L30 65 M70 35 L84 50 L70 65' stroke='%2338bdf8' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/><path d='M58 28 L42 72' stroke='%23818cf8' stroke-width='8' stroke-linecap='round'/></svg>">
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="loading-bar"></div>
     
-    <!-- NAV -->
+    <!-- NAVIGATION -->
     <nav class="nav">
         <div class="container wrap">
-            <div class="logo">
+            <a href="#" class="logo">
                 Md. <span>Shahid</span> Ali
                 <span class="location-tag">
-                    <i class="fas fa-map-marker-alt"></i>Jamshedpur, JH
+                    <i class="fas fa-map-marker-alt"></i> Jamshedpur, India
                 </span>
+            </a>
+            
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
             </div>
-            <div class="navlinks">
+
+            <div class="navlinks" id="navLinks">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">SaaS Platforms</a>
+                <a href="#shopify">Shopify Stores</a>
                 <a href="#education">Education</a>
-                <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <header class="hero">
         <div class="container">
             <div class="copy reveal">
                 <div class="badge">
-                    <i class="fas fa-rocket"></i>
-                    Python Automation & Data Scientist • Bot Builder • Blender Enthusiast
+                    <i class="fas fa-code-branch"></i>
+                    Full-Stack Engineer • Python & React • Shopify Architect
                 </div>
-                <h1 class="headline"> I build practical automations, clean UIs, and beginner-friendly projects.</h1>
-                <p class="sub">I'm a fresher focused on Python, Selenium, Flask, and modern HTML/CSS/Bootstrap. I also experiment with chatbots (LLaMA/Ollama) and explore animation in Blender.</p>
+                <h1 class="headline">Building scalable SaaS platforms, real-time systems, and custom e-commerce engines.</h1>
+                <p class="sub">
+                    Full-Stack Developer with <strong>1+ years of production experience</strong> engineering multi-tenant SaaS architectures (Django, React, WebSockets, WebRTC) and bespoke Shopify storefronts with automated catalog pipelines.
+                </p>
                 
                 <div class="cta">
-                    <a class="btn" href="assets/resume-1.pdf" download>
-                        <i class="fas fa-download"></i>Python Resume
+                    <a class="btn" href="assets/resume-fullstack.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-file-code"></i> Full-Stack Resume
                     </a>
-                    <a class="btn" href="assets/resume-2.pdf" download>
-                        <i class="fas fa-download"></i>Blender Resume
+                    <a class="btn btn-secondary" href="assets/resume-shopify.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-shopping-bag"></i> Shopify Resume
                     </a>
-                    
+                    <a class="btn ghost" href="#projects">
+                        <i class="fas fa-arrow-down"></i> View Live Systems
+                    </a>
                 </div>
             </div>
+
             <div class="hero-visual reveal">
                 <div class="avatar-container">
-                    <img class="avatar" src="assets/me.jpg" alt="Md. Shahid Ali - Professional Photo">
+                    <img class="avatar" src="assets/me.jpg" alt="Md. Shahid Ali - Professional Headshot">
+                    <div class="status-indicator" title="Available for Contracts & Engineering Roles">
+                        <span class="status-dot"></span> Available for hire
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- ABOUT -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="about container">
-        <h2 class="section-title reveal">About Me</h2>
+        <div class="section-header reveal">
+            <h2 class="section-title">About Me</h2>
+        </div>
         <div class="grid">
-            <div class="text reveal full">
-                <h3>Hello, my name is Md. Shahid Ali</h3>
+            <div class="card text reveal">
+                <h3>Engineering Practical, Production-Ready Software</h3>
                 <p>
-                    I am an aspiring <strong>Data Scientist and AI/ML Engineer</strong> with a strong academic background in commerce and a growing passion for technology. 
-                    Currently pursuing my <strong>Bachelor of Commerce (Honours)</strong> from Karim City College, I've built a solid foundation in analytical thinking and problem-solving.
+                    I am a <strong>Full-Stack Software Developer</strong> and <strong>Shopify Systems Architect</strong> specializing in high-throughput backend APIs, real-time collaboration engines, and automated data pipelines.
                 </p>
                 <p>
-                    Alongside my studies, I am actively learning <strong>Python, SQL, Data Analysis, Machine Learning, and Artificial Intelligence</strong>, while also strengthening my programming fundamentals through projects in <strong>web development</strong> and automation. 
-                    These projects help me apply my skills in real-world scenarios and prepare me for advanced AI/ML challenges.
+                    Over the past year, I have architected and deployed complex commercial web platforms from scratch—including <strong>Shout Sync</strong> (an enterprise workspace with sub-50ms WebSockets and WebRTC video calling), dedicated social analytics diagnostics tools, and automated multi-channel publishing engines.
                 </p>
                 <p>
-                    My long-term goal is to leverage data-driven solutions and intelligent systems to solve impactful problems in business and society. I am constantly exploring new technologies and refining my skills to move closer to becoming a professional in the fields of <strong>Data Science</strong> and <strong>Artificial Intelligence</strong>.
+                    On the e-commerce side, I have developed and customized <strong>15+ production Shopify stores</strong>, building tailored Liquid components, custom mega-menus, and Python-powered scrapers that automate catalog ingestion and validation via Shopify Admin APIs.
+                </p>
+                <p>
+                    Currently pursuing a <strong>Bachelor of Science (B.Sc.) in Computer Science</strong> from <strong>BITS Pilani</strong> to deepen my theoretical foundations in distributed systems, discrete logic, and scalable computing.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS SECTION -->
     <section id="skills" class="skills container">
-        <h2 class="section-title reveal">Skills</h2>
-        <div class="chips reveal">
-            <span class="badge"><i class="fab fa-python"></i>Python</span>
-            <span class="badge"><i class="fas fa-flask"></i>Flask</span>
-            <span class="badge"><i class="fas fa-code"></i>Jinja</span>
-            <span class="badge"><i class="fas fa-robot"></i>Selenium WebDriver</span>
-            <span class="badge"><i class="fas fa-desktop"></i>PyAutoGUI</span>
-            <span class="badge"><i class="fas fa-cogs"></i>Web Automation</span>
-            <span class="badge"><i class="fas fa-download"></i>Web Scraping</span>
-            <span class="badge"><i class="fas fa-arrow-up"></i>SQL</span>
-            <span class="badge"><i class="fas fa-robot"></i>Tkinter</span>
-            <span class="badge"><i class="fas fa-object-group"></i>GUI Programming</span>
-            <span class="badge"><i class="fab fa-html5"></i>HTML</span>
-            <span class="badge"><i class="fab fa-css3-alt"></i>CSS</span>
-            <span class="badge"><i class="fab fa-bootstrap"></i>Bootstrap</span>
-            <span class="badge"><i class="fab fa-envelope"></i>Api Automation</span>
-            <span class="badge"><i class="fab fa-git-alt"></i>Git & GitHub</span>
-            <span class="badge"><i class="fas fa-code-branch"></i>REST (Basics)</span>
-            <span class="badge"><i class="fas fa-brain"></i>LLaMA/Ollama</span>
-            <span class="badge"><i class="fas fa-search"></i>DuckDuckGo Search</span>
-            <span class="badge"><i class="fas fa-cube"></i>Blender (Animation)</span>
-            <span class="badge"><i class="fas fa-object-group"></i>OOP Fundamentals</span>
-            <span class="badge"><i class="fas fa-bug"></i>Debugging</span>
-            <span class="badge"><i class="fas fa-file-alt"></i>Documentation</span>
+        <div class="section-header reveal">
+            <h2 class="section-title">Technical Stack</h2>
+            <p class="lead">Core technologies and infrastructure I utilize across production environments:</p>
+        </div>
+        
+        <div class="skills-grid reveal">
+            <!-- Backend & Databases -->
+            <div class="card skill-category">
+                <div class="cat-header">
+                    <i class="fas fa-server"></i>
+                    <h4>Backend & Databases</h4>
+                </div>
+                <div class="chips">
+                    <span class="skill-pill"><i class="fab fa-python"></i> Python</span>
+                    <span class="skill-pill"><i class="fas fa-shield-alt"></i> Django REST Framework</span>
+                    <span class="skill-pill"><i class="fas fa-database"></i> Flask SQLAlchemy</span>
+                    <span class="skill-pill"><i class="fas fa-bolt"></i> FastAPI</span>
+                    <span class="skill-pill"><i class="fas fa-database"></i> PostgreSQL</span>
+                    <span class="skill-pill"><i class="fas fa-layer-group"></i> Redis</span>
+                    <span class="skill-pill"><i class="fas fa-database"></i> SQLite</span>
+                </div>
+            </div>
+
+            <!-- Frontend & Client State -->
+            <div class="card skill-category">
+                <div class="cat-header">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Frontend & Architecture</h4>
+                </div>
+                <div class="chips">
+                    <span class="skill-pill"><i class="fab fa-react"></i> React.js</span>
+                    <span class="skill-pill"><i class="fab fa-js"></i> TypeScript</span>
+                    <span class="skill-pill"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
+                    <span class="skill-pill"><i class="fas fa-cubes"></i> Redux Toolkit</span>
+                    <span class="skill-pill"><i class="fas fa-palette"></i> Material UI (MUI)</span>
+                    <span class="skill-pill"><i class="fab fa-css3-alt"></i> Tailwind CSS</span>
+                </div>
+            </div>
+
+            <!-- Real-Time & Media -->
+            <div class="card skill-category">
+                <div class="cat-header">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>Real-Time & Media</h4>
+                </div>
+                <div class="chips">
+                    <span class="skill-pill"><i class="fas fa-plug"></i> WebSockets (ASGI)</span>
+                    <span class="skill-pill"><i class="fas fa-video"></i> WebRTC (Audio/Video)</span>
+                    <span class="skill-pill"><i class="fas fa-cloud-upload-alt"></i> Cloudinary CDN</span>
+                    <span class="skill-pill"><i class="fas fa-robot"></i> LLM APIs (Groq / LLaMA)</span>
+                    <span class="skill-pill"><i class="fas fa-bell"></i> Webhook Pipelines</span>
+                    <span class="skill-pill"><i class="fas fa-bell"></i> Livekit SDK</span>
+                </div>
+            </div>
+
+            <!-- Shopify & E-Commerce -->
+            <div class="card skill-category">
+                <div class="cat-header">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h4>Shopify & E-Commerce</h4>
+                </div>
+                <div class="chips">
+                    <span class="skill-pill"><i class="fab fa-shopify"></i> Custom Shopify Liquid</span>
+                    <span class="skill-pill"><i class="fas fa-code"></i> Theme Customization</span>
+                    <span class="skill-pill"><i class="fas fa-exchange-alt"></i> Admin REST / GraphQL APIs</span>
+                    <span class="skill-pill"><i class="fas fa-spider"></i> Python Web Scraping</span>
+                    <span class="skill-pill"><i class="fas fa-boxes"></i> Catalog Automation</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Work Experience</h2>
+            <p class="lead">Commercial software engineering roles, promotions, and production deliveries:</p>
+        </div>
+
+        <div class="exp-timeline reveal">
+            <!-- Shout OTB Group Card -->
+            <div class="card exp-card">
+                <div class="exp-company-header">
+                    <div class="exp-icon-wrap">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="exp-company-info">
+                        <div class="exp-company-title-row">
+                            <h3 class="exp-company-name">Shout OTB</h3>
+                            <span class="exp-tenure-badge"><i class="fas fa-business-time"></i> 1 Year Total</span>
+                        </div>
+                        <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Bhopal, Madhya Pradesh, India • Remote</span>
+                    </div>
+                </div>
+
+                <div class="exp-roles-list">
+                    <!-- Role 1: Full-Time -->
+                    <div class="exp-role-item">
+                        <div class="role-marker">
+                            <div class="role-dot current"></div>
+                            <div class="role-line"></div>
+                        </div>
+                        <div class="role-details">
+                            <div class="role-title-row">
+                                <h4 class="role-title">Software Developer</h4>
+                                <span class="role-type-badge fulltime">Full-time</span>
+                            </div>
+                            <div class="role-period"><i class="fas fa-calendar-alt"></i> May 2026 — Present • 5 mos</div>
+                            <p class="role-description">
+                                Promoted to full-time Software Developer to architect, engineer, and maintain scalable solutions across the company's product suite. Spearheaded full-stack development of <strong>Shout Sync</strong> (real-time workspace with WebRTC calling, WebSockets, and dynamic spreadsheets) and designed core features for Shout Lab analytics.
+                            </p>
+                            <div class="role-skills-chips">
+                                <span>Full-Stack Architecture</span>
+                                <span>Django Channels</span>
+                                <span>React & TypeScript</span>
+                                <span>WebSockets / WebRTC</span>
+                                <span>Multi-Tenant RBAC</span>
+                                <span>API Security</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Intern -->
+                    <div class="exp-role-item">
+                        <div class="role-marker">
+                            <div class="role-dot"></div>
+                        </div>
+                        <div class="role-details">
+                            <div class="role-title-row">
+                                <h4 class="role-title">Software Developer Intern</h4>
+                                <span class="role-type-badge intern">Internship</span>
+                            </div>
+                            <div class="role-period"><i class="fas fa-calendar-alt"></i> Oct 2025 — Apr 2026 • 7 mos</div>
+                            <p class="role-description">
+                                Built and shipped the core agency web platform (<a href="https://shoutotb.com" target="_blank" class="text-link">shoutotb.com</a>) using comprehensive custom API structures, dynamic routing, and analytics dashboards for social audits.
+                            </p>
+                            <div class="role-skills-chips">
+                                <span>Web Architecture</span>
+                                <span>Python & REST APIs</span>
+                                <span>Database Design</span>
+                                <span>Diagnostics Audits</span>
+                            </div>
+                            <div class="role-cert-action">
+                                <button class="btn btn-cert open-cert-btn" 
+                                        data-title="Shout OTB — Software Developer Internship Certificate" 
+                                        data-cert="assets/Shout_OTB_Software_Developer_Internship_certificate.png">
+                                    <i class="fas fa-certificate"></i> View Completion Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SpikiTech Card -->
+            <div class="card exp-card">
+                <div class="exp-company-header">
+                    <div class="exp-icon-wrap spiki-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="exp-company-info">
+                        <div class="exp-company-title-row">
+                            <h3 class="exp-company-name">SpikiTech Private Limited</h3>
+                            <span class="role-type-badge intern">Internship</span>
+                        </div>
+                        <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                    </div>
+                </div>
+
+                <div class="exp-roles-list">
+                    <div class="exp-role-item no-line">
+                        <div class="role-marker">
+                            <div class="role-dot"></div>
+                        </div>
+                        <div class="role-details">
+                            <div class="role-title-row">
+                                <h4 class="role-title">Web Developer Intern</h4>
+                            </div>
+                            <div class="role-period"><i class="fas fa-calendar-alt"></i> Sep 2025 • 1 mo</div>
+                            <p class="role-description">
+                                Engineered responsive web interfaces, collaborated across version-controlled workflows with Git, and executed layout and performance optimizations for multiple projects.
+                            </p>
+                            <div class="role-skills-chips">
+                                <span>Web Development</span>
+                                <span>Git & Version Control</span>
+                                <span>UI/UX Implementation</span>
+                                <span>Responsive Design</span>
+                            </div>
+                            <div class="role-cert-action">
+                                <button class="btn btn-cert open-cert-btn" 
+                                        data-title="SpikiTech — Web Developer Internship Certificate" 
+                                        data-cert="assets/SpikiTech_Website_Developer_Internship_certificate.jpg">
+                                    <i class="fas fa-certificate"></i> View Completion Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAAS & PRODUCTION PROJECTS -->
     <section id="projects" class="projects container">
-        <h2 class="section-title reveal">Projects</h2>
-        <p class="lead">A few things I've built or experimented with. More on my GitHub profile.</p>
+        <div class="section-header reveal">
+            <h2 class="section-title">Production SaaS & Platforms</h2>
+            <p class="lead">Production systems, microservices, and live applications engineered end-to-end:</p>
+        </div>
+        
         <div class="grid cards">
-            
+            <!-- Shout Sync -->
             <article class="card project reveal">
-                <div class="badge"><i class="fas fa-cogs"></i>Api Automation</div>
-                <h3 class="title">Automated Flight Alert Programme</h3>
-                <p class="desc">A Python tool that monitors flight prices and sends alerts when ticket costs drop.</p>
-                <div class="links">
-                    <a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shahid-Ali-Dev/Flight_Alert_Programme">
-                        <i class="fas fa-external-link-alt"></i>View on GitHub
+                <div class="project-top">
+                    <div class="badge"><i class="fas fa-building"></i> Multi-Tenant SaaS</div>
+                    <span class="featured-tag">Flagship</span>
+                </div>
+                <h3 class="title">Shout Sync — Enterprise Workspace Suite</h3>
+                <p class="desc">
+                    All-in-one collaborative workspace featuring team management, interactive spreadsheets, Kanban task boards, sub-50ms live chat, and peer-to-peer WebRTC voice/video calls with 4-tier Role-Based Access Control (RBAC).
+                </p>
+                <div class="tech-stack-pills">
+                    <span>Django ASGI</span>
+                    <span>React TypeScript</span>
+                    <span>WebSockets</span>
+                    <span>WebRTC</span>
+                    <span>Redis</span>
+                    <span>MUI</span>
+                </div>
+                <div class="project-actions-row">
+                    <a class="btn" target="_blank" rel="noreferrer" href="https://shout-sync.vercel.app/">
+                        <i class="fas fa-external-link-alt"></i> Live App
                     </a>
+                    <button class="btn btn-video open-video-btn" data-title="Shout Sync — Workspace Demo" data-video="">
+                        <i class="fas fa-play-circle"></i> Watch Demo
+                    </button>
                 </div>
             </article>
+
+            <!-- Social Auto Engine -->
             <article class="card project reveal">
-                <div class="badge"><i class="fas fa-comment-dots"></i>Bots</div>
-                <h3 class="title">Discord / WhatsApp Auto-Responder</h3>
-                <p class="desc">Context-aware replies with recent chat memory and safe message handling.</p>
-                <div class="links">
-                    <a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shahid-Ali-Dev/Whatsapp_Chatbot">
-                        <i class="fas fa-external-link-alt"></i>View on GitHub
+                <div class="project-top">
+                    <div class="badge"><i class="fas fa-robot"></i> Automation Engine</div>
+                </div>
+                <h3 class="title">Social Auto Engine — Automated Posting</h3>
+                <p class="desc">
+                    High-throughput media dispatching system automating simultaneous publishing across Facebook, YouTube, Instagram, X (Twitter), Telegram, Discord and more with Cloudinary asset processing and error retries. 
+                </p>
+                <div class="tech-stack-pills">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>OAuth2</span>
+                    <span>Groq API</span>
+                    <span>Cloudinary CDN</span>
+                    <span>Webhooks</span>
+                </div>
+                <div class="project-actions-row">
+                    <a class="btn" target="_blank" rel="noreferrer" href="https://automated-social-media-handler.vercel.app/">
+                        <i class="fas fa-external-link-alt"></i> Live Platform
                     </a>
+                    <button class="btn btn-video open-video-btn" data-title="Social Auto Engine — Workflow Demo" data-video="">
+                        <i class="fas fa-play-circle"></i> Watch Demo
+                    </button>
                 </div>
             </article>
+
+            <!-- Shout Agency & Analytics Suite -->
             <article class="card project reveal">
-                <div class="badge"><i class="fas fa-microphone"></i>Voice Assistant</div>
-                <h3 class="title">Talk-to-Search Ai Voice Assistant</h3>
-                <p class="desc">Speech recognition + LLaMA/Ollama + DuckDuckGo search for quick answers.</p>
-                <div class="links">
-                    <a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shahid-Ali-Dev/Ai_VoiceAssistant">
-                        <i class="fas fa-external-link-alt"></i>View on GitHub
+                <div class="project-top">
+                    <div class="badge"><i class="fas fa-chart-line"></i> Analytics Suite</div>
+                </div>
+                <h3 class="title">Shout Agency Platform & Analyzers</h3>
+                <p class="desc">
+                    High-performance agency portal featuring dedicated diagnostic audit tools for YouTube retention signals and Instagram media engagement scoring engines.
+                </p>
+                <div class="tech-stack-pills">
+                    <span>Python</span>
+                    <span>REST APIs</span>
+                    <span>Data Scraping</span>
+                    <span>React</span>
+                </div>
+                <!-- Clean 2x2 Grid for 4 Action Buttons -->
+                <div class="project-actions-grid">
+                    <a class="btn ghost" target="_blank" rel="noreferrer" href="https://shoutotb.com/">
+                        <i class="fas fa-globe"></i> Main Portal
                     </a>
+                    <a class="btn ghost" target="_blank" rel="noreferrer" href="https://shoutotb.com/youtube-analyzer">
+                        <i class="fab fa-youtube"></i> YT Analyzer
+                    </a>
+                    <a class="btn ghost" target="_blank" rel="noreferrer" href="https://shoutotb.com/instagram-analyzer">
+                        <i class="fab fa-instagram"></i> IG Analyzer
+                    </a>
+                    <button class="btn btn-video open-video-btn" data-title="Shout Agency & Diagnostic Analyzers Demo" data-video="">
+                        <i class="fas fa-play-circle"></i> Watch Demo
+                    </button>
                 </div>
             </article>
         </div>
     </section>
 
-    <!-- EDUCATION -->
+    <!-- SHOPIFY CLIENT WORK -->
+    <section id="shopify" class="shopify container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Featured Shopify Stores</h2>
+            <p class="lead">Client storefronts built with custom Liquid blocks, performance tuning, and automated ingestion:</p>
+        </div>
+        
+        <div class="grid cards">
+            <!-- Austin Design House (Store 1) -->
+            <article class="card project reveal">
+                <div class="project-thumb-wrap open-video-btn" 
+                     data-title="Austin Design House — Storefront & Looped SVG Showcase" 
+                     data-video="https://res.cloudinary.com/gu9kfglm/video/upload/f_auto,q_auto/v1786438679/Austin_new_design_gfceui.mp4">
+                    <img class="project-thumb" 
+                         src="https://res.cloudinary.com/gu9kfglm/video/upload/so_1,f_auto,q_auto/v1786438679/Austin_new_design_gfceui.jpg" 
+                         alt="Austin Design House Storefront Showcase Preview" 
+                         loading="lazy">
+                    <div class="thumb-play-overlay">
+                        <div class="play-icon-circle"><i class="fas fa-play"></i></div>
+                        <span class="thumb-label">Watch Showcase</span>
+                    </div>
+                </div>
+
+                <div class="project-top">
+                    <div class="badge"><i class="fab fa-shopify"></i> Shopify Store</div>
+                    <button class="pass-tag copy-pass-btn" data-pass="seocre" title="Click to copy password">
+                        <i class="fas fa-key"></i> Pass: <code>seocre</code>
+                        <span class="copy-status"><i class="fas fa-copy"></i></span>
+                        <span class="copy-tooltip">Copied!</span>
+                    </button>
+                </div>
+
+                <h3 class="title">Austin Design House</h3>
+                <p class="desc">
+                    Luxury architectural interior storefront customized on Alabaster framework featuring continuous looped SVG section borders, custom button interactions, Wishlist app integration, and automated Python collection generation scripts.
+                </p>
+                <div class="tech-stack-pills">
+                    <span>Alabaster Theme</span>
+                    <span>Shopify Liquid</span>
+                    <span>Looped SVG</span>
+                    <span>Wishlist App</span>
+                    <span>Automation</span>
+                </div>
+                <div class="project-actions-row">
+                    <a class="btn" target="_blank" rel="noreferrer" href="https://austindesignhouse.myshopify.com/">
+                        <i class="fas fa-store"></i> Visit Store
+                    </a>
+                    <button class="btn btn-video open-video-btn" 
+                            data-title="Austin Design House — Storefront & Looped SVG Showcase" 
+                            data-video="https://res.cloudinary.com/gu9kfglm/video/upload/f_auto,q_auto/v1786438679/Austin_new_design_gfceui.mp4">
+                        <i class="fas fa-play-circle"></i> Watch Video
+                    </button>
+                </div>
+            </article>
+
+            <!-- Thomas Matthew Designs (Store 2) -->
+            <article class="card project reveal">
+                <div class="project-thumb-wrap open-video-btn" 
+                     data-title="Thomas Matthew Designs — Storefront Showcase" 
+                     data-video="https://res.cloudinary.com/gu9kfglm/video/upload/v1786438690/Thomas_Matthew_Design_vaxjc9.mp4">
+                    <img class="project-thumb" 
+                         src="https://res.cloudinary.com/gu9kfglm/video/upload/so_1,f_auto,q_auto/v1786438690/Thomas_Matthew_Design_vaxjc9.jpg" 
+                         alt="Thomas Matthew Designs Showcase Preview" 
+                         loading="lazy">
+                    <div class="thumb-play-overlay">
+                        <div class="play-icon-circle"><i class="fas fa-play"></i></div>
+                        <span class="thumb-label">Watch Showcase</span>
+                    </div>
+                </div>
+
+                <div class="project-top">
+                    <div class="badge"><i class="fab fa-shopify"></i> Shopify Store</div>
+                    <button class="pass-tag copy-pass-btn" data-pass="beevup" title="Click to copy password">
+                        <i class="fas fa-key"></i> Pass: <code>beevup</code>
+                        <span class="copy-status"><i class="fas fa-copy"></i></span>
+                        <span class="copy-tooltip">Copied!</span>
+                    </button>
+                </div>
+
+                <h3 class="title">Thomas Matthew Designs</h3>
+                <p class="desc">
+                    Modern e-commerce storefront featuring bespoke scroll-animated Liquid sections, multi-tier mega menus, dynamic Dark/Light theme switching, and automated catalog scraping/cleaning scripts.
+                </p>
+                <div class="tech-stack-pills">
+                    <span>Shopify Liquid</span>
+                    <span>Custom CSS/JS</span>
+                    <span>Catalog Scraper</span>
+                    <span>Mega Menu</span>
+                </div>
+                <div class="project-actions-row">
+                    <a class="btn" target="_blank" rel="noreferrer" href="https://thomas-matthew-designs.myshopify.com/">
+                        <i class="fas fa-store"></i> Visit Store
+                    </a>
+                    <button class="btn btn-video open-video-btn" 
+                            data-title="Thomas Matthew Designs — Storefront Showcase" 
+                            data-video="https://res.cloudinary.com/gu9kfglm/video/upload/v1786438690/Thomas_Matthew_Design_vaxjc9.mp4">
+                        <i class="fas fa-play-circle"></i> Watch Video
+                    </button>
+                </div>
+            </article>
+
+            <!-- Minhnuyet Hardy Interiors (Store 3) -->
+            <article class="card project reveal">
+                <div class="project-thumb-wrap open-video-btn" 
+                     data-title="Minhnuyet Hardy Interiors — Architecture & Theme Showcase" 
+                     data-video="https://res.cloudinary.com/gu9kfglm/video/upload/v1786438703/Minhnuyet_Hardy_Interiors_mwuaav.mp4">
+                    <img class="project-thumb" 
+                         src="https://res.cloudinary.com/gu9kfglm/video/upload/so_1,f_auto,q_auto/v1786438703/Minhnuyet_Hardy_Interiors_mwuaav.jpg" 
+                         alt="Minhnuyet Hardy Interiors Showcase Preview" 
+                         loading="lazy">
+                    <div class="thumb-play-overlay">
+                        <div class="play-icon-circle"><i class="fas fa-play"></i></div>
+                        <span class="thumb-label">Watch Showcase</span>
+                    </div>
+                </div>
+
+                <div class="project-top">
+                    <div class="badge"><i class="fab fa-shopify"></i> Shopify Store</div>
+                    <button class="pass-tag copy-pass-btn" data-pass="eupria" title="Click to copy password">
+                        <i class="fas fa-key"></i> Pass: <code>eupria</code>
+                        <span class="copy-status"><i class="fas fa-copy"></i></span>
+                        <span class="copy-tooltip">Copied!</span>
+                    </button>
+                </div>
+
+                <h3 class="title">Minhnuyet Hardy Interiors</h3>
+                <p class="desc">
+                    High-end architectural design storefront built on a customized Alabaster theme framework, featuring micro-interactions, custom gallery grids, and high-resolution automated product synchronization scripts.
+                </p>
+                <div class="tech-stack-pills">
+                    <span>Alabaster Theme</span>
+                    <span>Shopify Liquid</span>
+                    <span>Product Sync</span>
+                    <span>Asset Pipelines</span>
+                </div>
+                <div class="project-actions-row">
+                    <a class="btn" target="_blank" rel="noreferrer" href="https://minhnuyet-hardy-interiors-tkm43iha.myshopify.com/">
+                        <i class="fas fa-store"></i> Visit Store
+                    </a>
+                    <button class="btn btn-video open-video-btn" 
+                            data-title="Minhnuyet Hardy Interiors — Architecture & Theme Showcase" 
+                            data-video="https://res.cloudinary.com/gu9kfglm/video/upload/v1786438703/Minhnuyet_Hardy_Interiors_mwuaav.mp4">
+                        <i class="fas fa-play-circle"></i> Watch Video
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
     <section id="education" class="edu container">
-        <h2 class="section-title reveal">Education</h2>
-        <div class="grid reveal">
-            <div class="item card">
-                <h3><i class="fas fa-graduation-cap"></i> Karim City College</h3>
-                <div class="meta">B.Com (Honours) — Ongoing (2024-2028)</div>
+        <div class="section-header reveal">
+            <h2 class="section-title">Education</h2>
+            <p class="lead">Academic background in Computer Science and secondary schooling milestones:</p>
+        </div>
+        <div class="edu-list reveal">
+            <!-- BITS Pilani Card -->
+            <div class="card edu-card">
+                <div class="edu-card-top">
+                    <div class="edu-institution">
+                        <div class="edu-icon-wrap">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div>
+                            <h3 class="edu-name">Birla Institute of Technology and Science, Pilani (BITS Pilani)</h3>
+                            <h4 class="edu-degree">Bachelor of Science (B.Sc.) in Computer Science</h4>
+                        </div>
+                    </div>
+                    <div class="edu-badge-cluster">
+                        <span class="tag-badge tag-batch"><i class="fas fa-calendar-alt"></i> Batch 2026 — 2029</span>
+                        <span class="tag-badge tag-status-active"><i class="fas fa-clock"></i> Currently Enrolled</span>
+                    </div>
+                </div>
+                <div class="edu-card-body">
+                    <p class="edu-summary">
+                        Core academic focus in distributed software architecture, data structures & algorithms, relational database systems, discrete mathematics, and computational logic.
+                    </p>
+                </div>
             </div>
-            <div class="item card">
-                <h3><i class="fas fa-school"></i> Xavier's English High School</h3>
-                <div class="meta">Class 12, Commerce — <strong>90%</strong></div>
+
+            <!-- 12th CBSE Card -->
+            <div class="card edu-card">
+                <div class="edu-card-top">
+                    <div class="edu-institution">
+                        <div class="edu-icon-wrap">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="edu-name">Xavier's English High School</h3>
+                            <h4 class="edu-degree">Senior Secondary Certificate (Class 12th, CBSE — Commerce)</h4>
+                        </div>
+                    </div>
+                    <div class="edu-badge-cluster">
+                        <span class="tag-badge tag-batch"><i class="fas fa-calendar-alt"></i> Batch 2022 — 2024</span>
+                        <span class="tag-badge tag-status-done"><i class="fas fa-check-circle"></i> Completed 2024</span>
+                        <span class="tag-badge tag-score"><i class="fas fa-award"></i> 90% Aggregate</span>
+                    </div>
+                </div>
             </div>
-            <div class="item card">
-                <h3><i class="fas fa-school"></i> Xavier's English High School</h3>
-                <div class="meta">Class 10 — <strong>70%</strong></div>
+
+            <!-- 10th CBSE Card -->
+            <div class="card edu-card">
+                <div class="edu-card-top">
+                    <div class="edu-institution">
+                        <div class="edu-icon-wrap">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div>
+                            <h3 class="edu-name">Xavier's English High School</h3>
+                            <h4 class="edu-degree">Secondary School Certificate (Class 10th, CBSE)</h4>
+                        </div>
+                    </div>
+                    <div class="edu-badge-cluster">
+                        <span class="tag-badge tag-batch"><i class="fas fa-calendar-alt"></i> Batch 2020 — 2022</span>
+                        <span class="tag-badge tag-status-done"><i class="fas fa-check-circle"></i> Completed 2022</span>
+                        <span class="tag-badge tag-score"><i class="fas fa-award"></i> 70% Aggregate</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY / IMAGES -->
-    <section id="gallery" class="gallery container">
-        <h2 class="section-title reveal">Images of my work</h2>
-        <p class="lead">Here are a few examples of my work.</p>
-        <div class="grid">
-            <div class="tile reveal">
-                <img src="assets/gallery-1.png" alt="Work Image 1">
-            </div>
-            <div class="tile reveal">
-                <img src="assets/gallery-2.png" alt="Work Image 2">
-            </div>
-            <div class="tile reveal">
-                <img src="assets/gallery-3.png" alt="Work Image 3">
-            </div>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="lead">Open to high-impact full-stack engineering contracts, remote developer positions, and Shopify custom builds.</p>
         </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact container mt-5">
-        <h2 class="section-title reveal">Contact</h2>
         <div class="card reveal">
             <div class="contact-info">
-                <p class="lead">I'm open to internships, freelance, and collaboration opportunities.</p>
-                
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Jamshedpur, Jharkhand, India</span>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>alishahid555443@gmail.com</span>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+91 6207431327</span>
+                <div class="contact-details-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="label">Email</span>
+                            <a href="mailto:alishahid555443@gmail.com" class="val">alishahid555443@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span class="label">Phone / WhatsApp</span>
+                            <a href="tel:+916207431327" class="val">+91 6207431327</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <span class="label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/md-shahid-ali-b70bbb24a/" target="_blank" rel="noreferrer" class="val">in/md-shahid-ali-b70bbb24a</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <span class="label">GitHub</span>
+                            <a href="https://github.com/Shahid-Ali-Dev" target="_blank" rel="noreferrer" class="val">github.com/Shahid-Ali-Dev</a>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="row">
                     <a class="btn" href="mailto:alishahid555443@gmail.com">
-                        <i class="fas fa-envelope"></i>Email
+                        <i class="fas fa-paper-plane"></i> Send Direct Email
                     </a>
-                    <a class="btn ghost" href="tel:+916207431327">
-                        <i class="fas fa-phone"></i>Call
-                    </a>
-                    <a class="btn ghost" href="https://github.com/Shahid-Ali-Dev" target="_blank" rel="noreferrer">
-                        <i class="fab fa-github"></i>GitHub
-                    </a>
-                    <a class="btn ghost" href="https://www.linkedin.com/in/shahid-ali-b70bbb24a/" target="_blank" rel="noreferrer">
-                        <i class="fab fa-linkedin"></i>LinkedIn
+                    <a class="btn ghost" href="https://www.linkedin.com/in/md-shahid-ali-b70bbb24a/" target="_blank" rel="noreferrer">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <small>© <span id="year"></span> Md. Shahid Ali. All rights reserved.</small>
-      
             <div class="social-links">
-                <a href="https://github.com/Shahid-Ali-Dev" target="_blank" rel="noreferrer">
+                <a href="https://github.com/Shahid-Ali-Dev" target="_blank" rel="noreferrer" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/shahid-ali-b70bbb24a/" target="_blank" rel="noreferrer">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/md-shahid-ali-b70bbb24a/" target="_blank" rel="noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="mailto:alishahid555443@gmail.com">
+                <a href="mailto:alishahid555443@gmail.com" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
+            <small>© <span id="year"></span> Md. Shahid Ali. Built for performance and reliability.</small>
         </div>
     </footer>
 
-    <button class="back-to-top">
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" title="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- VIDEO MODAL LIGHTBOX -->
+    <div class="video-modal-overlay" id="videoModal">
+        <div class="video-modal-container">
+            <div class="video-modal-header">
+                <h4 id="videoModalTitle">Demo Showcase</h4>
+                <button class="video-modal-close" id="closeVideoModal" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="video-modal-body">
+                <!-- Video Player -->
+                <video id="modalVideoPlayer" controls playsinline preload="auto">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <!-- Placeholder Box (Shown when no video URL is provided) -->
+                <div class="video-placeholder" id="modalPlaceholder">
+                    <div class="placeholder-icon">
+                        <i class="fas fa-video-slash"></i>
+                    </div>
+                    <h3>Recording in Progress</h3>
+                    <p>The showcase demo for this platform is currently being recorded. You can explore the live system directly using the link button on the card.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATE IMAGE LIGHTBOX -->
+    <div class="video-modal-overlay cert-modal-overlay" id="certModal">
+        <div class="video-modal-container cert-modal-container">
+            <div class="video-modal-header">
+                <h4 id="certModalTitle">Internship Certificate</h4>
+                <button class="video-modal-close" id="closeCertModal" aria-label="Close certificate modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cert-modal-body">
+                <img id="certModalImage" src="" alt="Internship Certificate">
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Set current year
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Scroll reveal using IntersectionObserver
+        // Responsive Mobile Nav Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => navLinks.classList.remove('active'));
+            });
+        }
+
+        // Scroll reveal with IntersectionObserver
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -258,12 +781,13 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Back to top button
+        // Back to top & Scroll Progress
         const backToTopButton = document.querySelector('.back-to-top');
+        const loadingBar = document.querySelector('.loading-bar');
         
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
@@ -272,30 +796,135 @@
                 backToTopButton.classList.remove('visible');
             }
             
-            // Update loading bar
             const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollProgress = (window.scrollY / scrollableHeight) * 100;
-            document.querySelector('.loading-bar').style.width = scrollProgress + '%';
+            if (scrollableHeight > 0) {
+                const scrollProgress = (window.scrollY / scrollableHeight) * 100;
+                loadingBar.style.width = scrollProgress + '%';
+            }
         });
         
         backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ==================== COPY PASSWORD HANDLER ====================
+        document.querySelectorAll('.copy-pass-btn').forEach(btn => {
+            btn.addEventListener('click', async (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const pass = btn.getAttribute('data-pass');
+                
+                try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(pass);
+                    } else {
+                        const tempInput = document.createElement('input');
+                        tempInput.value = pass;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                    }
+                    
+                    btn.classList.add('copied');
+                    setTimeout(() => btn.classList.remove('copied'), 2000);
+                } catch (err) {
+                    console.error('Failed to copy password:', err);
+                }
             });
         });
 
-        // Simulate loading progress
-        window.addEventListener('load', () => {
-            document.querySelector('.loading-bar').style.width = '100%';
-            setTimeout(() => {
-                document.querySelector('.loading-bar').style.opacity = '0';
-            }, 500);
+        // ==================== VIDEO MODAL HANDLER ====================
+        const videoModal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('modalVideoPlayer');
+        const videoPlaceholder = document.getElementById('modalPlaceholder');
+        const videoTitle = document.getElementById('videoModalTitle');
+        const closeVideoBtn = document.getElementById('closeVideoModal');
+
+        const openVideo = (title, videoUrl) => {
+            videoTitle.textContent = title || 'Project Demo';
+            
+            if (videoUrl && videoUrl.trim() !== '') {
+                videoPlaceholder.style.display = 'none';
+                videoPlayer.style.display = 'block';
+                videoPlayer.src = videoUrl;
+                videoPlayer.load();
+                videoPlayer.play().catch(() => {});
+            } else {
+                videoPlayer.pause();
+                videoPlayer.removeAttribute('src');
+                videoPlayer.style.display = 'none';
+                videoPlaceholder.style.display = 'flex';
+            }
+            
+            videoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeVideo = () => {
+            videoModal.classList.remove('active');
+            videoPlayer.pause();
+            videoPlayer.removeAttribute('src');
+            videoPlayer.load();
+            document.body.style.overflow = '';
+        };
+
+        document.querySelectorAll('.open-video-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const title = btn.getAttribute('data-title');
+                const videoUrl = btn.getAttribute('data-video');
+                openVideo(title, videoUrl);
+            });
+        });
+
+        if (closeVideoBtn) closeVideoBtn.addEventListener('click', closeVideo);
+
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) closeVideo();
+        });
+
+        // ==================== CERTIFICATE MODAL HANDLER ====================
+        const certModal = document.getElementById('certModal');
+        const certImage = document.getElementById('certModalImage');
+        const certTitle = document.getElementById('certModalTitle');
+        const closeCertBtn = document.getElementById('closeCertModal');
+
+        const openCert = (title, certSrc) => {
+            certTitle.textContent = title || 'Internship Certificate';
+            certImage.src = certSrc;
+            certModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeCert = () => {
+            certModal.classList.remove('active');
+            certImage.src = '';
+            document.body.style.overflow = '';
+        };
+
+        document.querySelectorAll('.open-cert-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const title = btn.getAttribute('data-title');
+                const certSrc = btn.getAttribute('data-cert');
+                openCert(title, certSrc);
+            });
+        });
+
+        if (closeCertBtn) closeCertBtn.addEventListener('click', closeCert);
+
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) closeCert();
+        });
+
+        // Global Escape Key Listener
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (videoModal.classList.contains('active')) closeVideo();
+                if (certModal.classList.contains('active')) closeCert();
+            }
         });
     </script>
 </body>
 </html>
-
-
-
-
